@@ -27,10 +27,10 @@ ingrediensts_list = st.multiselect(
 if ingrediensts_list:  # Corrected the typo here
         ingredients_string = ''
 
-    for fruit_chosen in ingrediensts_list: 
-            ingredients_string += fruit_chosen + ' '
-            fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-            fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
+        for fruit_chosen in ingrediensts_list: 
+                ingredients_string += fruit_chosen + ' '
+                fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+                fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
 
     st.write(ingredients_string)
 
