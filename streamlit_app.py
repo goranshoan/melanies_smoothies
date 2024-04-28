@@ -24,10 +24,10 @@ ingrediensts_list = st.multiselect(
     , max_selections = 5
 )
 
-if ingrediensts_list:  # Corrected the typo here
+if ingrediensts_list:
         ingredients_string = ''
-
-        for fruit_chosen in ingrediensts_list: 
+        
+        for fruit_chosen in ingrediensts_list:
                 ingredients_string += fruit_chosen + ' '
                 st.subheader(fruit_chosen + 'Nutrition Information')
                 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
